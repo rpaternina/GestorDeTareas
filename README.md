@@ -19,10 +19,13 @@
         <li>Buscar tareas por título.</li>
         <li>Interfaz de usuario simple y fácil de usar.</li>
     </ul>
-
-<h2>Clases Implementadas</h2>
-
-<h3>1. Clase <code>Tarea</code></h3>
+    <h2>Tecnologías</h2>
+    <p>Este proyecto está desarrollado en:</p>
+    <ul>
+        <li><img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Logo" width="30"/> Java</li>
+    </ul>
+    <h2>Clases Implementadas</h2>
+    <h3>1. Clase <code>Tarea</code></h3>
     <ul>
         <li><strong>Atributos:</strong>
             <ul>
@@ -42,8 +45,7 @@
             </ul>
         </li>
     </ul>
-
-<h3>2. Clase <code>GestorTareas</code></h3>
+    <h3>2. Clase <code>GestorTareas</code></h3>
     <ul>
         <li><strong>Atributos:</strong>
             <ul>
@@ -60,29 +62,23 @@
             </ul>
         </li>
     </ul>
-
-<h2>Flujo de Interacción</h2>
+    <h2>Flujo de Interacción</h2>
     <p>Al iniciar la aplicación, el usuario verá un menú con las opciones disponibles. Podrá agregar tareas, eliminar tareas, marcarlas como completadas y buscar tareas específicas. El usuario puede salir del sistema en cualquier momento.</p>
-
-<h2>Instalación y Ejecución</h2>
+    <h2>Instalación y Ejecución</h2>
     <ol>
         <li>Clona este repositorio en tu máquina local.</li>
         <li>Abre el proyecto en tu entorno de desarrollo Java preferido.</li>
         <li>Compila y ejecuta el programa.</li>
     </ol>
-
-<h2>Contribuciones</h2>
+    <h2>Contribuciones</h2>
     <p>Las contribuciones son bienvenidas. Si deseas contribuir, por favor crea un fork del repositorio y envía un pull request con tus cambios.</p>
-
-<h2>Licencia</h2>
+    <h2>Licencia</h2>
     <p>Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más información.</p>
-
-<h2>Información de Contacto</h2>
+    <h2>Información de Contacto</h2>
     <p><strong>Correo:</strong> <a href="mailto:paterninayolir@gmail.com">paterninayolir@gmail.com</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/robert-paternina/" target="_blank">Robert Paternina</a></p>
     <p><strong>GitHub:</strong> <a href="https://github.com/rpaternina" target="_blank">rpaternina</a></p>
-
-<footer>
+    <footer>
         <p>&copy; 2024 Robert Paternina. Todos los derechos reservados.</p>
     </footer>
 </body>
