@@ -30,7 +30,7 @@ public class GestorTareas {
                         
                     //Eliminar tarea    
                     case 2:
-                        
+                        agregar.eliminarTarea(JOptionPane.showInputDialog(null, "Ingrese el titulo de la tarea"));
                         
                         break;
                     

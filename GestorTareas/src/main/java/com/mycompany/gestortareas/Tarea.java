@@ -49,7 +49,7 @@ public class Tarea {
 
     public String datosTarea() {
         
-        return  "Titulo: " + titulo + "\n" + "Descripción: " + descripcion + "\n" + "Estado: " + estado + "\n" +
+        return  "Titulo: " + titulo + "\n" + "Descripción: " + descripcion + "\n" +
                 "---------------------------" + "\n";
                 
     }

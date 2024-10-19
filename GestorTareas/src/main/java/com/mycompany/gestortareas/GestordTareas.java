@@ -37,14 +37,34 @@ public class GestordTareas {
         }
 
     }
-    
-    public void eliminarTarea(String titulo){
-        
-    }
-    
-    public void mostrarTareas(){
+
+    public void eliminarTarea(String titulo) {
+
         StringBuilder mostrar = new StringBuilder();
-        for(Tarea mostrarTareas : listaTareas){
+        boolean eliminarTareaEncontrada = false;
+        try {
+            
+            for(int i = 0; i < listaTareas.size();i++){
+                if(titulo.equalsIgnoreCase(listaTareas.get(i).getTitulo())){
+                    listaTareas.remove(i);
+                    eliminarTareaEncontrada = true;
+                     JOptionPane.showMessageDialog(null, "Tarea eliminada con exito!");
+                    break;
+                }else{
+                     JOptionPane.showMessageDialog(null, "No se elimino");
+                }
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+
+        }
+
+    }
+
+    public void mostrarTareas() {
+        StringBuilder mostrar = new StringBuilder();
+        for (Tarea mostrarTareas : listaTareas) {
             mostrar.append(mostrarTareas.datosTarea());
         }
         JOptionPane.showMessageDialog(null, mostrar.toString());
