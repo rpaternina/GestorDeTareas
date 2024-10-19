@@ -7,6 +7,10 @@ public class Tarea {
     private String descripcion;
     private boolean estado;
 
+    public Tarea() {
+    }
+
+    
     public Tarea(String titulo, String descripcion, boolean estado) {
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -35,6 +39,16 @@ public class Tarea {
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+    
+    
+    public void agregarTareas(){
+        
+    }
+    
+    
+    public String toString(){
+        return "Titulo: " + titulo + "\n" + "Descripción: " + descripcion + "\n"+ "Estado " + estado;
     }
 
 }
