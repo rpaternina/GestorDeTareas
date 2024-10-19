@@ -8,7 +8,7 @@ public class GestorTareas {
         
         
         boolean salir = true;
-        Tarea agregar = new Tarea();
+        GestordTareas agregar = new GestordTareas();
         
         while (salir) {
             try {
@@ -41,6 +41,7 @@ public class GestorTareas {
                         
                     //Ver todas las tareas    
                     case 4:
+                        agregar.mostrarTareas();
                         
                         break;
                         
@@ -63,8 +64,6 @@ public class GestorTareas {
             }
         }
         
-        
-        
-        
+      
     }
 }

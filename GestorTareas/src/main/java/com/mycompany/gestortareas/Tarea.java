@@ -1,5 +1,8 @@
-
 package com.mycompany.gestortareas;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 public class Tarea {
 
@@ -7,10 +10,12 @@ public class Tarea {
     private String descripcion;
     private boolean estado;
 
-    public Tarea() {
+    public Tarea() {}
+    public Tarea(String titulo, String descripcion) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
     }
 
-    
     public Tarea(String titulo, String descripcion, boolean estado) {
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -40,15 +45,13 @@ public class Tarea {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    
-    
-    public void agregarTareas(){
+       
+
+    public String datosTarea() {
         
-    }
-    
-    
-    public String toString(){
-        return "Titulo: " + titulo + "\n" + "Descripción: " + descripcion + "\n"+ "Estado " + estado;
+        return  "Titulo: " + titulo + "\n" + "Descripción: " + descripcion + "\n" + "Estado: " + estado + "\n" +
+                "---------------------------" + "\n";
+                
     }
 
 }
