@@ -42,19 +42,24 @@ public class GestordTareas {
 
         StringBuilder mostrar = new StringBuilder();
         boolean eliminarTareaEncontrada = false;
+
         try {
-            
-            for(int i = 0; i < listaTareas.size();i++){
-                if(titulo.equalsIgnoreCase(listaTareas.get(i).getTitulo())){
-                    listaTareas.remove(i);
-                    eliminarTareaEncontrada = true;
-                     JOptionPane.showMessageDialog(null, "Tarea eliminada con exito!");
-                    break;
-                }else{
-                     JOptionPane.showMessageDialog(null, "No se elimino");
+            if (!listaTareas.isEmpty()) {
+
+                for (int i = 0; i < listaTareas.size(); i++) {
+                    if (titulo.equalsIgnoreCase(listaTareas.get(i).getTitulo())) {
+                        listaTareas.remove(i);
+                        eliminarTareaEncontrada = true;
+                        JOptionPane.showMessageDialog(null, "Tarea eliminada con exito!");
+                        break;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No se elimino");
+                    }
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "Lista vacia");
             }
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
 
@@ -62,6 +67,13 @@ public class GestordTareas {
 
     }
 
+    
+    public void buscarxTitulo(String titulo) {
+        
+        
+    }
+
+    
     public void mostrarTareas() {
         StringBuilder mostrar = new StringBuilder();
         for (Tarea mostrarTareas : listaTareas) {
