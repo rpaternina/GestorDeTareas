@@ -12,7 +12,6 @@ public class GestordTareas {
         listaTareas = new ArrayList<>();
     }
 
-    
     //Metodo para agregat tareas en el ArrayList
     public void agregarTareas() {
 
@@ -47,27 +46,20 @@ public class GestordTareas {
 
         boolean eliminarTareaEncontrada = false;
 
-        try {
-            if (!listaTareas.isEmpty()) {
+        if (!listaTareas.isEmpty()) {
 
-                for (int i = 0; i < listaTareas.size(); i++) {
+            for (int i = 0; i < listaTareas.size(); i++) {
 
-                    if (titulo.equalsIgnoreCase(listaTareas.get(i).getTitulo())) {
-                        listaTareas.remove(i);
-                        eliminarTareaEncontrada = true;
-                        JOptionPane.showMessageDialog(null, "Tarea eliminada con exito!");
-                        break;
-                    } else {
-                        JOptionPane.showMessageDialog(null, "No se elimino");
-                    }
-                }
-            } else {
-                JOptionPane.showMessageDialog(null, "Lista vacia");
+                if (titulo.equalsIgnoreCase(listaTareas.get(i).getTitulo())) {
+                    listaTareas.remove(i);
+                    eliminarTareaEncontrada = true;
+                    JOptionPane.showMessageDialog(null, "Tarea eliminada con exito!");
+                    break;
+                } 
             }
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-
+            if(!eliminarTareaEncontrada) JOptionPane.showMessageDialog(null, "No se elimino!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Lista vacia");
         }
 
     }
