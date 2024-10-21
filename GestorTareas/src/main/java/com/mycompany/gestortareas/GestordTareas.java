@@ -19,8 +19,8 @@ public class GestordTareas {
         boolean datosGuardados = true;
         while (salir) {
             try {
-                String titulo = JOptionPane.showInputDialog(null, "Ingrese un titulo");
-                String descripcion = JOptionPane.showInputDialog(null, "Ingrese una descripcion");
+                String titulo = JOptionPane.showInputDialog(null, "Ingrese un titulo").trim();
+                String descripcion = JOptionPane.showInputDialog(null, "Ingrese una descripcion").trim();
 
                 if (datosGuardados) {
                     Tarea nuevaTarea = new Tarea(titulo, descripcion);
@@ -68,16 +68,24 @@ public class GestordTareas {
     public void buscarxTitulo(String titulo) {
 
         StringBuilder titulos = new StringBuilder();
+        boolean tareaEncontrada = false;
 
         if (!listaTareas.isEmpty()) {
             for (Tarea buscarTitulo : listaTareas) {
                 if (titulo.equalsIgnoreCase(buscarTitulo.getTitulo())) {
-                    titulos.append("Titulo: ").append(buscarTitulo.getTitulo()).append("\n")
-                            .append("Descripción: ").append(buscarTitulo.getDescripcion());
+                    titulos.append("Titulo: ").append(buscarTitulo.getTitulo().toUpperCase()).append("\n")
+                            .append("Descripción: ").append(buscarTitulo.getDescripcion().toUpperCase());
+                    tareaEncontrada = true;
+                    break;
                 }
             }
 
-            JOptionPane.showMessageDialog(null, "TAREAS \n" + titulos.toString());
+            if(tareaEncontrada){
+                JOptionPane.showMessageDialog(null, "TAREAS \n" + titulos.toString());
+            }else{
+                JOptionPane.showMessageDialog(null, "No existe!");
+            }
+            
         } else {
             JOptionPane.showMessageDialog(null, "Lista vacia!");
         }
